@@ -1,3 +1,19 @@
+```
+A := int[K]
+
+fun inc() { 
+    i := random(K)
+    FAA(&A[i], 1)
+}
+
+fun get() { 
+    sum := 0
+    for (i := 0; i < K; i++)
+        sum += A[i]
+    return sum
+}
+```
+
 This counter implementation is linearizable. 
 
 *Proof.* Consider any concurrent history of operations on the counter. To prove linearizability we must construct a corresponding sequential history that produces the same results and preserves ordering of any two operations A and B, such that A finished execution before invocation of B in the original history.
